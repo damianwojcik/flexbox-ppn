@@ -45,6 +45,12 @@ a:hover {
     color: rgba(0, 0, 0, 0.7);
 }
 
+button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
 .bg-blue {
     background-color: var(--blue);
 }
@@ -62,6 +68,10 @@ a:hover {
 }
 
 /* BEGIN LAYOUT */
+.page-wrapper {
+    position: relative;
+}
+
 .flex {
     display: flex;
 }
@@ -126,7 +136,7 @@ a:hover {
 }
 /* END BUTTONS */
 
-/* BEGIN HEADER*/
+/* BEGIN HEADER */
 .header {
     padding: 0 2.5rem;
 }
@@ -134,10 +144,16 @@ a:hover {
 .logo {
     display: flex;
     align-items: center;
+    margin: 1rem 0;
+}
+
+.navigation {
+    display: flex;
 }
 
 .navigation__list {
     display: flex;
+    flex: 1;
     text-transform: uppercase;
 }
 
@@ -194,13 +210,23 @@ a:hover {
     position: relative;
     font-weight: 300;
 }
-/* END HEADER*/
 
-/* BEGIN MAIN */
-.main {
-    background-color: salmon;
+.navbar-toggler {
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0.2rem 0.35rem;
+    border: 1px solid var(--lightgray);
+    margin: 1rem 0;
+    cursor: pointer;
+    display: none;
 }
 
+.navbar-toggler:hover {
+    background-color: var(--lightgray);
+}
+/* END HEADER */
+
+/* BEGIN MAIN */
 .main .col {
     display: flex;
 }

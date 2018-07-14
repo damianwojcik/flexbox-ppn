@@ -1,0 +1,45 @@
+/* BEGIN HEADER */
+.header .navigation__list {
+    display: none;
+}
+
+.navbar-toggler {
+    display: block;
+}
+
+.opened .page-wrapper:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9;
+}
+
+.opened .header .navigation {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    background-color: var(--lightgray);
+    height: 100vh;
+    z-index: 99;
+    padding: 1rem 3rem;
+}
+
+.opened .header .navigation__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.opened .navigation__item:not(.searchbutton) a {
+    padding: 1rem 0;
+}
+
+.opened .searchbutton {
+    margin-left: 0;
+}
+/* END HEADER */
