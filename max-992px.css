@@ -1,3 +1,13 @@
+/* BEGIN LAYOUT */
+.row {
+    flex-wrap: wrap;
+}
+
+.col-3 {
+    flex-basis: 50%;
+}
+/* END LAYOUT */
+
 /* BEGIN HEADER */
 .header .navigation__list {
     display: none;

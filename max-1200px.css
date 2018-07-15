@@ -1,6 +1,35 @@
+/* BEGIN LAYOUT */
+.col-3 {
+    flex-basis: 50%;
+}
+/* END LAYOUT */
+
 /* BEGIN HEADER */
 .header,
 .footer {
     padding: 0 1rem;
 }
 /* END HEADER */
+
+/* BEGIN MAIN */
+.article__buttons {
+    display: none;
+}
+
+.article__wrap .article__title {
+    font-size: 1rem;
+    line-height: 1.4375rem;
+    margin-bottom: 2rem;
+    height: 4.5rem;
+    overflow: hidden;
+    max-width: 50%;
+}
+
+.article__wrap .article__arrow {
+    margin-bottom: 2rem;
+}
+
+.article.counter {
+    text-align: center;
+}
+/* END MAIN */

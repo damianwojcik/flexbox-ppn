@@ -76,6 +76,10 @@ button {
     display: flex;
 }
 
+.flex-columns {
+    flex-direction: column;
+}
+
 .justify-content-between {
     justify-content: space-between;
 }
@@ -94,7 +98,6 @@ button {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .row .row {
@@ -227,6 +230,11 @@ button {
 /* END HEADER */
 
 /* BEGIN MAIN */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .main .col {
     display: flex;
 }
@@ -245,6 +253,9 @@ button {
 .article__wrap {
     position: relative;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .article a {
@@ -286,6 +297,7 @@ button {
     font-weight: 400;
     display: flex;
     justify-content: flex-start;
+    margin-top: auto;
 }
 
 .article__meta .icon-location {

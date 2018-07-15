@@ -3,3 +3,26 @@
     display: none;
 }
 /* END HEADER */
+
+/* BEGIN MAIN */
+.article {
+    padding: 2rem 1.5rem;
+}
+
+.article__date {
+    margin-bottom: 1rem;
+}
+
+.article__arrow {
+    font-size: 2rem;
+}
+
+.article__wrap .article__title {
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+.article__wrap .article__arrow {
+    margin-bottom: 0.5rem;
+}
+/* END MAIN */
