@@ -1,0 +1,20 @@
+.header .navigation__list {
+    display: flex;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+.footer {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.footer .row {
+    flex-direction: row;
+}
+
+.sponsors li {
+    padding: 1rem 0;
+}

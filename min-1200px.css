@@ -1,0 +1,12 @@
+.header,
+.footer {
+    padding: 0 2.5rem;
+}
+
+.article__buttons {
+    display: flex;
+}
+
+.counter {
+    text-align: left;
+}
