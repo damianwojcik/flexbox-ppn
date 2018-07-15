@@ -28,6 +28,7 @@ body {
 
 ul {
     list-style: none;
+    list-style-image: none;
 }
 
 img {
@@ -65,6 +66,10 @@ button {
 
 .text-center {
     text-align: center;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
 }
 
 /* BEGIN LAYOUT */
@@ -107,18 +112,6 @@ button {
 .col {
     flex: 1;
 }
-
-.col-6 {
-    flex-basis: 50%;
-}
-
-.col-3 {
-    flex-basis: 25%;
-}
-
-.col-12 {
-    flex-basis: 100%;
-}
 /* END LAYOUT */
 
 /* BEGIN BUTTONS */
@@ -140,8 +133,8 @@ button {
 /* END BUTTONS */
 
 /* BEGIN HEADER */
-.header {
-    padding: 0 2.5rem;
+.header, .footer {
+    padding: 0 1rem;
 }
 
 .logo {
@@ -158,6 +151,10 @@ button {
     display: flex;
     flex: 1;
     text-transform: uppercase;
+}
+
+.header .navigation__list {
+    display: none;
 }
 
 .navigation__item {
@@ -182,6 +179,7 @@ button {
     padding-left: 0.8rem;
     color: black;
     line-height: 1;
+    display: none;
 }
 
 .logo h1 small {
@@ -221,24 +219,49 @@ button {
     border: 1px solid var(--lightgray);
     margin: 1rem 0;
     cursor: pointer;
-    display: none;
 }
 
 .navbar-toggler:hover {
     background-color: var(--lightgray);
 }
+
+.opened .page-wrapper:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9;
+}
+
+.opened .header .navigation {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    background-color: var(--lightgray);
+    height: 100vh;
+    z-index: 99;
+    padding: 1rem 3rem;
+    min-width: 35vw;
+}
+
+.opened .header .navigation__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.opened .navigation__item:not(.searchbutton) a {
+    padding: 1rem 0;
+}
+
+.opened .searchbutton {
+    margin-left: 0;
+}
 /* END HEADER */
-
-/* BEGIN MAIN */
-.main {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.main .col {
-    display: flex;
-}
-/* END MAIN */
 
 /* BEGIN ARTICLE */
 .article {
@@ -246,7 +269,7 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 2.1875rem;
+    padding: 2rem 1.5rem;
     flex: 1;
 }
 
@@ -267,7 +290,7 @@ button {
     font-size: 1rem;
     font-weight: 700;
     line-height: 1;
-    margin-bottom: 1.5625rem;
+    margin-bottom: 1rem;
 }
 
 .article__date sup {
@@ -277,18 +300,10 @@ button {
 }
 
 .article__title {
-    font-size: 1.8rem;
-    line-height: 2.1875rem;
-    font-weight: 300;
-    max-width: 26.25rem;
-    display: block;
-    margin-bottom: 1.875rem;
-}
-
-.col-3 .article__title {
     font-size: 1rem;
-    line-height: 1.4375rem;
-    margin-bottom: 3.75rem;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 0;
 }
 
 .article__meta {
@@ -311,11 +326,7 @@ button {
     display: inline-block;
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1.5625rem;
-}
-
-.col-3 .article__arrow {
-    margin-bottom: 3.125rem;
+    margin-bottom: 0.5rem;
 }
 
 .article__arrow:hover {
@@ -326,7 +337,7 @@ button {
     position: absolute;
     right: 0;
     bottom: 0;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -342,10 +353,6 @@ button {
     color: var(--green);
 }
 
-.article.counter {
-    text-align: left;
-}
-
 .bg-color .article__date,
 .bg-color .article__meta {
     opacity: 0.5;
@@ -353,6 +360,10 @@ button {
 /* END ARTICLE */
 
 /* BEGIN COUNTER */
+.counter {
+    text-align: center;
+}
+
 .counter__title {
     font-size: 1rem;
     line-height: 1;
@@ -360,23 +371,34 @@ button {
 }
 
 .counter__value {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 300;
+    line-height: 1;
 }
 /* END COUNTER */
 
 /* BEGIN FOOTER */
 .footer {
-    padding: 0 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-.footer .navigation {
-    display: flex;
+.footer .row {
+    flex-direction: column;
+}
+
+.footer .navigation__list {
+    flex-direction: column;
+}
+
+.footer .navigation__item a {
+    padding: 1rem;
 }
 
 .sponsors {
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .sponsors li {
@@ -384,7 +406,6 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 0;
 }
 
 .sponsors li:not(:first-child) {

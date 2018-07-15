@@ -15,6 +15,10 @@
     flex-direction: row;
 }
 
+.sponsors {
+    margin-bottom: 0;
+}
+
 .sponsors li {
     padding: 1rem 0;
 }

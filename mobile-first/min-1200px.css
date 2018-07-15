@@ -1,0 +1,48 @@
+.col-3 {
+    flex-basis: 25%;
+}
+
+.col-12 {
+    height: 50%;
+}
+
+.flex-columns {
+    flex-shrink: 1;
+}
+
+.header,
+.footer {
+    padding: 0 2.5rem;
+}
+
+.article__buttons {
+    display: flex;
+}
+
+.article__wrap .article__title {
+    max-width: 100%;
+    margin-bottom: 3.75rem;
+}
+
+.col-3 .article__arrow {
+    margin-bottom: 3.125rem;
+}
+
+.col-6 .article__title {
+    font-size: 1.8rem;
+    line-height: 2.1875rem;
+    margin-bottom: 1.875rem;
+}
+
+.article__arrow {
+    font-size: 2.5rem;
+    margin-bottom: 1.5625rem;
+}
+
+.counter {
+    text-align: left;
+}
+
+.sponsors li:not(:first-child) {
+    margin-left: 2.5rem;
+}

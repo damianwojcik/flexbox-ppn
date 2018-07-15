@@ -1,0 +1,13 @@
+.col-3,
+.col-6 {
+    flex-basis: 50%;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article {
+    height: 100%;
+}
