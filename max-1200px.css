@@ -33,3 +33,9 @@
     text-align: center;
 }
 /* END MAIN */
+
+/* BEGIN FOOTER */
+.sponsors li:not(:first-child) {
+    margin-left: 1rem;
+}
+/* END FOOTER */

@@ -26,3 +26,13 @@
     margin-bottom: 0.5rem;
 }
 /* END MAIN */
+
+/* BEGIN FOOTER */
+.footer .navigation__list {
+    flex-direction: column;
+}
+
+.footer .navigation__item a {
+    padding: 1rem;
+}
+/* END FOOTER */

@@ -53,3 +53,21 @@
     margin-left: 0;
 }
 /* END HEADER */
+
+/* BEGIN FOOTER */
+.footer {
+    padding: 1rem;
+}
+
+.footer .row {
+    flex-direction: column;
+}
+
+.footer .navigation__list {
+    justify-content: center;
+}
+
+.sponsors li {
+    padding: 0;
+}
+/* END FOOTER */
